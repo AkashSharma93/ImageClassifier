@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="760.0" minWidth="1360.0" prefHeight="760.0" prefWidth="1360.0" style="-fx-background-color:lightcyan;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+   <children>
+      <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="710.0" prefWidth="992.0">
+         <content>
+            <TilePane fx:id="tile" hgap="10.0" prefHeight="713.0" prefWidth="990.0" vgap="10.0" style="-fx-background-color:papayawhip">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               </TilePane>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="1026.0" layoutY="14.0" prefHeight="710.0" prefWidth="300.0" style="-fx-background-color: gray;">
+         <children>
+            <Button layoutX="42.0" layoutY="457.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+            <Button layoutX="201.0" layoutY="457.0" mnemonicParsing="false" onAction="#filterImages" prefHeight="25.0" prefWidth="67.0" text="Set Filter" />
+            <Label layoutX="106.0" layoutY="20.0" text="Filtering Options" />
+            <ListView fx:id="listView" layoutX="42.0" layoutY="58.0" prefHeight="102.0" prefWidth="216.0" />
+            <ComboBox fx:id="comboBox" layoutX="42.0" layoutY="190.0" prefWidth="150.0" promptText="Filter" />
+            <Button layoutX="216.0" layoutY="190.0" mnemonicParsing="false" onAction="#addFilter" text="Add" />
+         </children></Pane>
+      <Pane layoutX="14.0" layoutY="729.0" prefHeight="25.0" prefWidth="992.0" style="-fx-background-color: LightBlue;">
+         <children>
+            <Label fx:id="statusLabel" layoutX="26.0" prefHeight="7.0" prefWidth="572.0" text="Status..." textFill="#f50000" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
